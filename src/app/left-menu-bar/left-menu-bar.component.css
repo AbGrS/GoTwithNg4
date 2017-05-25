@@ -1,0 +1,23 @@
+ul.primaryUL{
+	background: #4c4a49;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	padding-left: 0;
+}
+ul.primaryUL>li{
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.liClicked{
+	background: #00c3aa;
+	cursor: pointer;
+}
+
+.material-icons.mat-icon{
+	position: relative;
+    top: 6px;
+    margin-right: 15px;
+}

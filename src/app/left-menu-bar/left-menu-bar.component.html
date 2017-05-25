@@ -1,0 +1,55 @@
+<div>
+	<ul class="primaryUL" style="margin: 0;list-style-type: none">
+	<ng-container *ngFor="let x of arr">
+
+		<div *ngIf="x.children=='';then firstBlock;else elseBlock">
+			
+		</div>
+
+		<ng-template #firstBlock>
+			<li  (click)="clicked($event)" id="{{x.id}}"   
+			ngClass="{{x.liClicked}}" routerLink="{{x.routerLink}}">
+
+				<span ng-click="clicked($event)">
+					<md-icon ng-click="clicked($event)">{{x.icon}}</md-icon>
+				</span>
+				
+				{{x.name}}
+
+				<span style="float: right" ng-click="clicked($event)">
+					<md-icon >{{x.secondaryIcon}}</md-icon>
+				</span>
+
+				<ng-template [ngIf]="x.showChildren">
+					<ul *ngFor="let y of x.children">
+						<li routerLink="{{y.routerLink}}">{{y.name}}</li>
+					</ul>
+				</ng-template>
+				
+			</li>
+		</ng-template>
+		<ng-template #elseBlock>
+			<li  (click)="clicked($event)" id="{{x.id}}"   
+			ngClass="{{x.liClicked}}">
+
+				<span ng-click="clicked($event)">
+					<md-icon ng-click="clicked($event)">{{x.icon}}</md-icon>
+				</span>
+				
+				{{x.name}}
+
+				<span style="float: right" ng-click="clicked($event)">
+					<md-icon >{{x.secondaryIcon}}</md-icon>
+				</span>
+
+				<ng-template [ngIf]="x.showChildren">
+					<ul *ngFor="let y of x.children" style="list-style-type: none">
+						<li routerLink="{{y.routerLink}}">{{y.name}}</li>
+					</ul>
+				</ng-template>
+				
+			</li>
+		</ng-template>
+	</ng-container>
+	</ul>
+</div>
