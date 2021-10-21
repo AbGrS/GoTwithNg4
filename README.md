@@ -1,4 +1,4 @@
-# MyDreamApp
+# Ng4 application. Bootstrap this to see this kind of layout https://wickedrahul.github.io/GoTwithNg4/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
